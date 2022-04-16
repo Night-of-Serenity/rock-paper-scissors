@@ -38,3 +38,9 @@ function playRound(playerSelection,computerSelection) {
         return "You Won! Scissors beats Paper";
     }
 }
+
+const playerSelection = prompt("Choose 'rock' 'paper' 'scissors'");
+
+const computerSelection = computerPlay();
+
+console.log(playRound(playerSelection,computerSelection));
