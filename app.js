@@ -40,16 +40,25 @@ function playRound(playerSelection,computerSelection) {
 }
 
 function game(round) { 
+    // Simulate number of rounds game 
     let win = 0;
     let lose = 0;
     let playerSelection;
     let computerSelection;
     let play_round;
+    // Iterate loops for number of rounds
     for (let i = 0; i < round; i++) {
+        // Player choose input
         playerSelection = prompt("Choose 'rock' 'paper' 'scissors'");
+
+        // Generate random result for computer
         computerSelection = computerPlay();  
+
+        // Simulate one round of game
         play_round= playRound(playerSelection,computerSelection);
         console.log(play_round);
+
+        // Record score
         if (play_round.includes("Won")) {
             win++;
         }
@@ -57,6 +66,8 @@ function game(round) {
             lose++;
         }
     }
+
+    // Find winner which won more rounds
     if  (win > lose) {
         console.log("You are winner!");
     }
@@ -67,6 +78,8 @@ function game(round) {
         console.log("No winner!");
 }
 
+// Prompt player for input number of rounds
 const round = prompt("How many round you want to play");
+
 game(round);
 
