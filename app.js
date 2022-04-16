@@ -17,7 +17,7 @@ function playRound(playerSelection,computerSelection) {
 
     // Find winner of round
     if ((playerSelection === "rock" && computerSelection === "rock") || (playerSelection === "paper" && computerSelection == "paper") || (playerSelection === "scissors" && computerSelection === "scissors")) {
-        return "Tie";
+        return "You Tie!";
     }
     else if (playerSelection === "rock" && computerSelection === "scissors") {
         return "You Won! Rock beats Scissors";
@@ -39,8 +39,34 @@ function playRound(playerSelection,computerSelection) {
     }
 }
 
-const playerSelection = prompt("Choose 'rock' 'paper' 'scissors'");
+function game(round) { 
+    let win = 0;
+    let lose = 0;
+    let playerSelection;
+    let computerSelection;
+    let play_round;
+    for (let i = 0; i < round; i++) {
+        playerSelection = prompt("Choose 'rock' 'paper' 'scissors'");
+        computerSelection = computerPlay();  
+        play_round= playRound(playerSelection,computerSelection);
+        console.log(play_round);
+        if (play_round.includes("Won")) {
+            win++;
+        }
+        else if(play_round.includes("Lose")) {
+            lose++;
+        }
+    }
+    if  (win > lose) {
+        console.log("You are winner!");
+    }
+    else if (win < lose) {
+        console.log("Computer is winner!");
+    }
+    else 
+        console.log("No winner!");
+}
 
-const computerSelection = computerPlay();
+const round = prompt("How many round you want to play");
+game(round);
 
-console.log(playRound(playerSelection,computerSelection));
