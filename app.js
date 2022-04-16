@@ -1,10 +1,11 @@
 function computerPlay() {
     // Generate random result of rock, paper, scissors for computer
-    let random_result = Math.random();
-    if (random_result >= 2/3) {
+    let random_result = Math.floor(Math.random() * 3);
+    console.log(random_result);
+    if (random_result === 0) {
         return 'rock';
     }
-    else if (1/3 <= random_result < 2/3) {
+    else if (random_result === 1) {
         return 'paper';
     }
     else    
