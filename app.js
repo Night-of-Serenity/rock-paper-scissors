@@ -17,7 +17,7 @@ function playRound(playerSelection,computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
     // Find winner of round
-    if ((playerSelection === "rock" && computerSelection === "rock") || (playerSelection === "paper" && computerSelection == "paper") || (playerSelection === "scissors" && computerSelection === "scissors")) {
+    if (playerSelection === computerSelection) {
         return "You Tie!";
     }
     else if (playerSelection === "rock" && computerSelection === "scissors") {
