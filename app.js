@@ -2,14 +2,17 @@ function computerPlay() {
     // Generate random result of rock, paper, scissors for computer
     let random_result = Math.floor(Math.random() * 3);
     console.log(random_result);
-    if (random_result === 0) {
-        return 'rock';
+    switch (random_result) {
+        case 0:
+            return 'rock';
+            break;
+        case 1:
+            return 'paper';
+            break;
+        case 2:
+            return 'scissors';
+            break;
     }
-    else if (random_result === 1) {
-        return 'paper';
-    }
-    else    
-        return 'scissors';
 }
 
 function playRound(playerSelection,computerSelection) {
