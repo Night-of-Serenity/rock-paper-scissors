@@ -80,7 +80,7 @@ function game(round) {
 }
 
 // Prompt player for input number of rounds
-const round = prompt("How many round you want to play");
+const round = 5;
 
 game(round);
 
