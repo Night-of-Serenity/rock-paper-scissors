@@ -6,6 +6,7 @@
 }
 
 body {
+    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -72,7 +73,7 @@ main {
     gap: 15%;
 }
 .button-container button {
-    width:250px;
+    width:200px;
 }
 .button-container img {
     width: 100%;
