@@ -19,7 +19,7 @@ let round = 5;
 function computerPlay() {
     // Generate random result of rock, paper, scissors for computer
     let random_result = Math.floor(Math.random() * 3);
-    console.log(random_result);
+    console.log('computer random numb generated: ' + random_result);
     switch (random_result) {
         case 0:
             return 'rock';
@@ -34,7 +34,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection,computerSelection) {
-    console.log(playerSelection + ' ' +computerSelection);
+    console.log("player pick: " + playerSelection + ",com pick: " +computerSelection);
     // Find winner of round
     if (playerSelection === computerSelection) {
         return "You Tie!";
