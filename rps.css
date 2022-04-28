@@ -6,7 +6,6 @@
 }
 
 body {
-    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -18,6 +17,8 @@ header, footer {
     padding: 1rem;
     font-size: 30px;
     font-weight: bolder;
+    background-color: rgb(5, 5, 75);
+    color: #2dfcff;
 }
 main {
     display: flex;
@@ -25,17 +26,26 @@ main {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background-color: rgb(40, 12, 110);
+    color: #2dfcff;
+    font-size: larger;
+    font-weight: bold;
 }
 
 .score-main {
     width:75%;
     margin: 4rem 0;
 }
+
 .score-info,.score-message,.score-panel {
     padding: 1rem 0;
     margin: 0.5rem;
 } 
 
+.score-info,.score-message {
+    font-size: larger;
+    font-weight: bolder;
+}
 .score-board {
     display: flex;
 }
@@ -44,10 +54,14 @@ main {
     flex:1;
 }
 
-.score-message {
+.score-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #2dfcff solid 2px;
     width: 100%;
     height: 10rem;
-    border: black solid 2px;
 }
 
 .button-container {
@@ -62,6 +76,7 @@ main {
 }
 .button-container img {
     width: 100%;
+    background-color: #2dfcff;
 }
 
 .winner {
@@ -69,3 +84,4 @@ main {
     font-weight: bolder;
     color: red;
 }
+
