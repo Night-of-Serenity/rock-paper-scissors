@@ -4,10 +4,12 @@ const btnScissors = document.querySelector('#btnScissors');
 const scoreMessage = document.querySelector('.score-message');
 const playerNumber = document.querySelector('#player-number');
 const comNumber = document.querySelector('#com-number');
+const btnRestart = document.querySelector('#btn-restart');
 
 btnRock.addEventListener('click', playerClick);
 btnPaper.addEventListener('click', playerClick);
 btnScissors.addEventListener('click', playerClick);
+btnRestart.addEventListener('click',() => location.reload());// Reload page)
 
 let playerWin = 0;
 let comWin = 0;
