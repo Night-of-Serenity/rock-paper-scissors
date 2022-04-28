@@ -13,7 +13,8 @@ btnRestart.addEventListener('click',() => location.reload());// Reload page)
 
 let playerWin = 0;
 let comWin = 0;
-let round = 5;
+let getWinner = false;
+
 
 
 function computerPlay() {
@@ -69,8 +70,7 @@ function playRound(playerSelection,computerSelection) {
 function playerClick(e) {
     // Get attribute id-player-pick value from clicked image
     const playerSelection = e.target.attributes[0].value;
-    if (round > 0) {
-        round--;
+    if (!getWinner) {
         scoreMessage.textContent = playRound(playerSelection,computerPlay());
         updateScore();
         checkWinner();
@@ -79,24 +79,18 @@ function playerClick(e) {
 }
 
 function checkWinner() {
-    if (round === 0) {
+    if (playerWin === 5 || comWin === 5) {
         if (playerWin > comWin) {
             scoreMessage.textContent = 'YOU WIN!';
             scoreMessage.classList.add('winner');
-            return;
         }
-        else if (comWin > playerWin) {
+        else {
             scoreMessage.textContent = 'YOU LOSE!';
             scoreMessage.classList.add('winner');
-            return;
         } 
-        else {
-            scoreMessage.textContent= 'GAME TIE!';
-            scoreMessage.classList.add('winner');
-            return;
-        }
+        getWinner = true;
     }
-    else return;
+    return;
 }
 
 function updateScore() {
