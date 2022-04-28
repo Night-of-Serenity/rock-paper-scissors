@@ -16,12 +16,12 @@
             <div class="score-panel">
                 <div class="score-title">SCORE</div>
                 <div class="score-board">
-                    <div class="score-player">
-                        <div class="score-number">0</div>
+                    <div class="score-column">
+                        <div id="player-number" class="score-number">0</div>
                         <div class="score-name">player</div>
                     </div>
-                    <div class="score-player">
-                        <div class="score">0</div>
+                    <div class="score-column">
+                        <div id="com-number" class="score">0</div>
                         <div class="score-name">computer</div>
                     </div>
                 </div>
@@ -30,13 +30,13 @@
         </div>
         <div class="button-container">
             <button id="btnRock">
-                <img src="./images/rock_39413.png" alt="rock-hand">
+                <img id-player-pick="rock" src="./images/rock_39413.png" alt="rock">
             </button>
             <button id="btnPaper">
-                <img src="./images/paper_38485.png" alt="paper-hand">
+                <img id-player-pick="paper"src="./images/paper_38485.png" alt="paper">
             </button>
             <button id="btnScissors">
-                <img src="./images/scissors_39412.png" alt="scissors-hand">
+                <img id-player-pick="scissors"src="./images/scissors_39412.png" alt="scissors">
             </button>
         </div>
     </main>
