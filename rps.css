@@ -2,11 +2,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* border: black solid 1px; */
 }
 
 body {
-    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -85,4 +83,3 @@ main {
     font-weight: bolder;
     color: red;
 }
-
